@@ -16,6 +16,7 @@ android {
 dependencies {
     di()
     general()
+    home()
     testing()
     network()
 

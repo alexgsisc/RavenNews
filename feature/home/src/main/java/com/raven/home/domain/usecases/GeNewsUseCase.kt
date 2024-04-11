@@ -4,6 +4,8 @@ import com.raven.core.bases.BaseUseCase
 import com.raven.home.domain.HomeDataSource
 import com.raven.home.domain.mapper.GetNewsMapper
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
 class GeNewsUseCase @Inject constructor(
@@ -12,6 +14,9 @@ class GeNewsUseCase @Inject constructor(
 ) : BaseUseCase<Unit, List<String>>() {
 
     override fun execute(params: Unit): Flow<List<String>> {
-        TODO("Get the news list from your repository and use your mapper for your viewModel")
+        return flow {
+            val result = dataSource.getNews()
+            emit(listOf("data"))
+        }
     }
 }

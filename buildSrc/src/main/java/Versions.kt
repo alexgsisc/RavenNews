@@ -8,6 +8,7 @@ object Versions {
     const val lifeCycle = "2.7.0"
     const val coroutines = "1.7.1"
     const val kotlinCore = "1.12.0"
+    const val ktxFragment = "1.6.2"
 
     /** Testing **/
 

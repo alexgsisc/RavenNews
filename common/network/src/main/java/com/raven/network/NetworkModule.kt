@@ -26,10 +26,11 @@ class NetworkModule {
     @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder().baseUrl(BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create()).client(okHttpClient).build()
+            .addConverterFactory(GsonConverterFactory.create()).client(okHttpClient)
+            .build()
     }
 
     companion object {
-        private const val BASE_URL = ""
+        private const val BASE_URL = "https://api.nytimes.com/"
     }
 }
