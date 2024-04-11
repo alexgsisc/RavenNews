@@ -16,11 +16,11 @@ import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
+    private val viewModel: HomeViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         logError("onCreate fragment")
-        val viewModel: HomeViewModel by viewModels()
 
     }
     override fun onCreateView(
